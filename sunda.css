@@ -1,0 +1,116 @@
+* {
+    scroll-behavior: smooth;
+    box-sizing: border-box; /* Menambahkan box-sizing untuk mengatur padding dan border */
+}
+
+body {
+    min-height: 100vh; /* Mengatur tinggi minimum */
+    display: flex;
+    flex-direction: column;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: white; /* Warna latar belakang yang lebih lembut */
+    font-size: 18px; /* Ukuran font yang lebih kecil untuk teks */
+    color: #333; /* Warna teks yang lebih gelap untuk kontras */
+}
+
+header {
+    position: relative; /* Mengatur posisi relatif untuk header */
+    padding: 20px; /* Mengurangi padding untuk header */
+    margin: 0;
+    border-radius: 25px;
+    color: white;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center; /* Mengatur menu ke tengah */
+    gap: 20px;
+}
+
+nav ul li {
+    position: relative; /* Mengatur posisi relatif untuk li */
+}
+
+nav ul li a {
+    position: relative; /* Mengatur posisi relatif untuk tautan */
+    z-index: 1; /* Menempatkan teks di atas gambar */
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 24px; /* Ukuran font yang lebih besar */
+    padding: 10px 15px; /* Padding yang lebih besar untuk area klik yang lebih baik */
+    border-radius: 5px; /* Menambahkan border-radius untuk efek rounded */
+    transition: background-color 0.3s; /* Transisi untuk efek hover */
+    margin-left: 10px; /* Menambahkan margin kiri untuk memberi jarak dari gambar */
+}
+
+nav ul li .background-image {
+    position: absolute; /* Mengatur posisi absolut untuk gambar */
+    top: 0;
+    left: 0;
+    width: 100%; /* Mengatur lebar gambar agar sesuai dengan li */
+    height: 100%; /* Mengatur tinggi gambar agar sesuai dengan li */
+    object-fit: cover; /* Mengatur gambar agar menutupi area */
+    filter: blur(2px); /* Efek blur */
+    z-index: 0; /* Menempatkan gambar di belakang teks */
+    margin: 0; /* Menghapus margin pada gambar */
+}
+
+.blur-image {
+    position: relative; /* Mengatur posisi relatif untuk blur-image */
+    width: 9000px; /* Atur lebar li sesuai kebutuhan */
+    height: 500px; /* Atur tinggi li sesuai kebutuhan */
+    overflow: hidden; /* Menyembunyikan bagian gambar yang keluar dari li */
+}
+
+.overlay-text {
+    position: absolute; /* Mengatur posisi absolut untuk teks */
+    top: 50%; /* Posisikan teks di tengah vertikal */
+    left: 50%; /* Posisikan teks di tengah horizontal */
+    transform: translate(-50%, -50%); /* Menggeser teks ke tengah */
+    color: white; /* Warna teks */
+    font-size: 40px; /* Ukuran font */
+    text-align: center; /* Pusatkan teks */
+    background-color: rgba(228, 203, 203, 0.5); /* Latar belakang semi-transparan */
+    padding: 15px; /* Padding untuk teks */
+    border-radius: 5px; /* Sudut melengkung untuk latar belakang */
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap; /* Mengizinkan kartu untuk membungkus ke baris berikutnya */
+    justify-content: center; /* Mengatur konten ke tengah */
+    padding: 20px;
+}
+
+.card {
+    background-color: white; /* Warna latar belakang kartu */
+    border-radius: 10px; /* Sudut melengkung */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Bayangan untuk efek kedalaman */
+    margin: 15px; /* Jarak antar kartu */
+    padding: 20px; /* Padding di dalam kartu */
+    width: calc(45% - 40px); /* Lebar kartu, dua kartu per baris */
+    max-width: 600px; /* Lebar maksimum kartu */
+}
+
+h4 {
+    color: #424242;
+    margin-bottom: 10px; /* Jarak bawah untuk judul */
+}
+
+p {
+    color: #555; /* Warna teks yang lebih lembut */
+    line-height: 1.6; /* Menambahkan jarak antar baris */
+}
+
+.footer {
+    margin-top: auto; /* Memastikan footer berada di bawah */
+    padding: 20px;
+    background-color: #ece0e0; /* Menggunakan kode warna yang benar */
+    color: white;
+    text-align: center;
+    border-radius: 25px; /* Menambahkan border-radius untuk footer */
+    font-size: 16px; /* Ukuran font untuk footer */
+}
